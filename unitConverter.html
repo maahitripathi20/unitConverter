@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container {
+        text-align: center;
+        border: 1px solid rgb(255, 255, 255);
+        background-color: rgb(14, 14, 31);
+        color: white;
+        margin-left: 150px;
+        margin-right: 150px;
+        padding: 50px;
+    }
+
+    span {
+        text-align: left;
+        margin-right: 60px;
+    }
+
+    input {
+        height: 30px;
+        width: 160px;
+    }
+
+    button {
+        color: rgb(255, 0, 0);
+        background-color: gold;
+        height: 30px;
+        width: 150px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin: 11px;
+        text-align: center;
+        border-radius: 25px;
+    }
+
+    button:hover {
+        background-color: rgb(145, 145, 0);
+    }
+</style>
+
+<body>
+    <div id="container">
+        <h2>Unit Converter</h2>
+        <span>Feet </span> <input type="text" id="inp"><br><br>
+
+        <button onclick="update()">convert to cms</button><br>
+
+        <p id="cms"></p>
+
+    </div>
+    <script>
+        function update() {
+            let inp = document.getElementById("inp");
+            let val = inp.value;
+            let cms = val * 30.48;
+            let elm = document.getElementById("cms");
+            elm.innerHTML = `${cms}`;
+        }
+
+
+    </script>
+
+</body>
+
+</html>
